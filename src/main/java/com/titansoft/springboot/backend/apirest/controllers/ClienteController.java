@@ -31,7 +31,7 @@ import com.titansoft.springboot.backend.apirest.models.service.IClienteService;
 //CrossOrigin establece los dominios desde los cuales se puede acceder a este controlador...
 //..para enviar y recibir datos
 //@CrossOrigin(origins = {"http://localhost:4200", "http://192.168.0.15:4200", "http://192.168.0.11:4200"})
-@CrossOrigin(origins = {"*"})
+@CrossOrigin(origins = {"*", "http://localhost:4200"})
 @RestController
 @RequestMapping("/api")
 public class ClienteController {
