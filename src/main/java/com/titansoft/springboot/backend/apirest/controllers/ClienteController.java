@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,8 +32,8 @@ import com.titansoft.springboot.backend.apirest.models.service.IClienteService;
 //CrossOrigin establece los dominios desde los cuales se puede acceder a este controlador...
 //..para enviar y recibir datos
 //@CrossOrigin(origins = {"http://localhost:4200", "http://192.168.0.15:4200", "http://192.168.0.11:4200"})
-@CrossOrigin(origins = {"*", "http://localhost:4200"})
 @RestController
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 @RequestMapping("/api")
 public class ClienteController {
 
